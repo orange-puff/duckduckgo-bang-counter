@@ -7,7 +7,7 @@ function getEmptyBangStorage() {
 export function initialize() {
     browser.storage.local.get(BANG_STORAGE_KEY)
         .then(result => {
-            if (Object.entries(result) === 0) {
+            if (Object.entries(result).length === 0) {
                 browser.storage.local.set(getEmptyBangStorage());
             }
         });

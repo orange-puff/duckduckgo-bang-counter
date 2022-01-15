@@ -4,7 +4,7 @@ const BANG_REGEX = /[a-zA-Z0-9]?%21(\w)/;
 function searchBang(search) {
     const match = search.match(BANG_REGEX);
     if (!match) {
-        return null;
+        return "duckduckgo";
     }
 
     return match[match.length - 1].toLowerCase();
