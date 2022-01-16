@@ -5,7 +5,7 @@
   "description": "How many Bangs are you using?",
   "homepage_url": "https://github.com/orange-puff/duckduckgo-bang-counter",
   "icons": {
-    "48": "icons/red-brick-wall-48.png"
+    "48": "icons/duckduckgo-bang-counter-icon.png"
   },
   "permissions": [
     "tabs",
@@ -14,7 +14,7 @@
     "webRequest"
   ],
   "browser_action": {
-    "default_icon": "icons/red-brick-wall-48.png",
+    "default_icon": "icons/duckduckgo-bang-counter-icon.png",
     "default_title": "DuckDuckGo Bang Counter",
     "default_popup": "popup/duckduckgo-bang-counter.html"
   },
