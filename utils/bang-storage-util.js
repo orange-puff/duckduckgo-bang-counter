@@ -14,7 +14,7 @@ export function initialize() {
 }
 
 export function reset() {
-    browser.storage.local.set(getEmptyBangStorage());
+    return browser.storage.local.set(getEmptyBangStorage());
 }
 
 export function add(bang) {

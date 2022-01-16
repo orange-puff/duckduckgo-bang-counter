@@ -3,7 +3,10 @@ import { BANG_STORAGE_KEY, reset } from '../utils/bang-storage-util.js';
 function listenForClicks() {
     document.addEventListener("click", (e) => {
         if (e.target.classList.contains("reset")) {
-            reset();
+            reset()
+            .then(() => {
+                // TODO: add UI cleanup logic
+            })
         }
     });
 }
@@ -21,6 +24,7 @@ function reportExecuteScriptError(error) {
 function onStartUp() {
     browser.storage.local.get(BANG_STORAGE_KEY)
         .then(result => {
+            // TODO: add UI construction logic
             console.log(result);
         });
 }
