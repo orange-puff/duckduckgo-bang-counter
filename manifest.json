@@ -8,9 +8,7 @@
     "48": "icons/duckduckgo-bang-counter-icon.png"
   },
   "permissions": [
-    "tabs",
     "storage",
-    "<all_urls>",
     "webRequest"
   ],
   "browser_action": {
