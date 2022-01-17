@@ -18,13 +18,19 @@ export function reset() {
 }
 
 export function add(bang) {
+    if (bang === null) {
+        return;
+    }
+
     browser.storage.local.get(BANG_STORAGE_KEY)
         .then(result => {
-            if (!(bang in result[BANG_STORAGE_KEY])) {
-                result[BANG_STORAGE_KEY][bang] = 0;
+            const key = bang.bang;
+            if (!(key in result[BANG_STORAGE_KEY])) {
+                result[BANG_STORAGE_KEY][key] = bang;
+                result[BANG_STORAGE_KEY][key]['count'] = 0;
             }
 
-            result[BANG_STORAGE_KEY][bang] += 1;
+            result[BANG_STORAGE_KEY][key]['count'] += 1;
 
             browser.storage.local.set(result);
         });
