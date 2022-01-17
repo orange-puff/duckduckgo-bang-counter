@@ -1,20 +1,21 @@
 {
   "manifest_version": 2,
-  "name": "DuckDuckGoBangCounter",
+  "name": "DuckDuckGoGoogleBangCounter",
   "version": "1.0",
-  "description": "How many Bangs are you using?",
+  "description": "How many Google Bangs are you using?",
   "homepage_url": "https://github.com/orange-puff/duckduckgo-bang-counter",
   "icons": {
-    "48": "icons/duckduckgo-bang-counter-icon.png"
+    "96": "icons/duckduckgo-google-bang-counter-96.png"
   },
   "permissions": [
     "storage",
-    "webRequest"
+    "webRequest",
+    "<all_urls>"
   ],
   "browser_action": {
-    "default_icon": "icons/duckduckgo-bang-counter-icon.png",
-    "default_title": "DuckDuckGo Bang Counter",
-    "default_popup": "popup/duckduckgo-bang-counter.html"
+    "default_icon": "icons/duckduckgo-google-bang-counter-96.png",
+    "default_title": "DuckDuckGo Google Bang Counter",
+    "default_popup": "popup/duckduckgo-google-bang-counter.html"
   },
   "background": {
     "page": "background/background-page.html"

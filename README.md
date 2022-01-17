@@ -1,4 +1,4 @@
-# duckduckgo-bang-counter
+# duckduckgo-google-bang-counter
 
 ### Status
 
