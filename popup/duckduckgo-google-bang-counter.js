@@ -1,12 +1,12 @@
-import { BANG_STORAGE_KEY, reset } from '../utils/bang-storage-util.js';
+import { get, reset } from '../utils/bang-storage-util.js';
 
 function listenForClicks() {
     document.addEventListener("click", (e) => {
         if (e.target.classList.contains("reset")) {
             reset()
-            .then(() => {
-                // TODO: add UI cleanup logic
-            })
+                .then(() => {
+                    // TODO: add UI cleanup logic
+                })
         }
     });
 }
@@ -22,11 +22,11 @@ function reportExecuteScriptError(error) {
 }
 
 function onStartUp() {
-    browser.storage.local.get(BANG_STORAGE_KEY)
+    get()
         .then(result => {
-            // TODO: add UI construction logic
+            // TODO: add UI construction
             console.log(result);
-        });
+        })
 }
 
 try {

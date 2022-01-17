@@ -35,3 +35,7 @@ export function add(bang) {
             browser.storage.local.set(result);
         });
 }
+
+export function get() {
+    return browser.storage.local.get(BANG_STORAGE_KEY);
+}
